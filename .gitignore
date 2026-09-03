@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependencies / build (none currently, but just in case)
+node_modules/
+dist/
+
+# Local notes / scratch
+*.local
+scratch/
