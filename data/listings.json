@@ -1,0 +1,374 @@
+{
+  "generated": "2026-09-03T00:00:00Z",
+  "source": "manual-seed",
+  "note": "Seeded by hand from public MLS data 2026-09-03. Replaced automatically once the CREA DDF sync (scripts/sync-listings.mjs) has credentials.",
+  "listings": [
+    {
+      "mls": "202612563",
+      "status": "Active",
+      "kind": "House",
+      "price": 399000,
+      "priceLabel": "$399,000",
+      "address": "20 Coulter Way",
+      "areaLabel": "Brandon · Woodlands",
+      "area": "Woodlands",
+      "intent": "buy invest",
+      "office": "Sutton-Harrison Realty",
+      "spec": "5 bed · 3 bath · 1,454 sq ft · built 2008",
+      "sub": "Brandon, Manitoba  R7A2V1 · Woodlands · MLS® 202612563",
+      "description": "Spacious 3+2 bedroom, 2.5-bathroom condo in the desirable Woodlands area of Brandon. An open main floor connects the living room, dining area and kitchen. Three bedrooms sit on the upper level, with two more rooms downstairs for bedrooms, an office or storage. Close to schools, shopping, parks and walking pathways.",
+      "facts": [
+        [
+          "Type",
+          "Row / townhouse — freehold condo"
+        ],
+        [
+          "Bedrooms",
+          "5 (3 up + 2 down)"
+        ],
+        [
+          "Bathrooms",
+          "3"
+        ],
+        [
+          "Size",
+          "1,454 sq ft · built 2008"
+        ],
+        [
+          "Condo fee",
+          "$340 / month (water, landscaping, management, reserve)"
+        ],
+        [
+          "Property taxes",
+          "$4,336 / year"
+        ],
+        [
+          "Parking",
+          "Attached single garage"
+        ],
+        [
+          "Heating & cooling",
+          "Forced-air natural gas, central A/C, HRV"
+        ],
+        [
+          "Lot",
+          "2,560 sq ft · 22 ft frontage"
+        ],
+        [
+          "MLS®",
+          "202612563"
+        ]
+      ],
+      "photos": [
+        {
+          "src": "assets/img/listings/coulter-01.jpg",
+          "alt": "Front exterior of the townhouse, unit 20 with attached garage"
+        },
+        {
+          "src": "assets/img/listings/coulter-02.jpg",
+          "alt": "Open-concept living room, dining area and kitchen"
+        },
+        {
+          "src": "assets/img/listings/coulter-03.jpg",
+          "alt": "Living room looking toward the kitchen"
+        },
+        {
+          "src": "assets/img/listings/coulter-04.jpg",
+          "alt": "Dining area and kitchen with stainless steel appliances"
+        },
+        {
+          "src": "assets/img/listings/coulter-05.jpg",
+          "alt": "Kitchen with centre island, stainless appliances and pantry"
+        },
+        {
+          "src": "assets/img/listings/coulter-06.jpg",
+          "alt": "Main-floor two-piece powder room"
+        },
+        {
+          "src": "assets/img/listings/coulter-07.jpg",
+          "alt": "Front entry and staircase"
+        },
+        {
+          "src": "assets/img/listings/coulter-08.jpg",
+          "alt": "Upper-level staircase and landing"
+        },
+        {
+          "src": "assets/img/listings/coulter-09.jpg",
+          "alt": "Primary bedroom"
+        },
+        {
+          "src": "assets/img/listings/coulter-10.jpg",
+          "alt": "Primary bedroom with walk-in closet"
+        },
+        {
+          "src": "assets/img/listings/coulter-11.jpg",
+          "alt": "Second bedroom with mirrored closet"
+        },
+        {
+          "src": "assets/img/listings/coulter-12.jpg",
+          "alt": "Third bedroom with window overlooking the neighbourhood"
+        },
+        {
+          "src": "assets/img/listings/coulter-13.jpg",
+          "alt": "Bedroom with double mirrored closet"
+        },
+        {
+          "src": "assets/img/listings/coulter-14.jpg",
+          "alt": "Upper-level hallway with linen closet"
+        },
+        {
+          "src": "assets/img/listings/coulter-15.jpg",
+          "alt": "Bedrooms off the upper-level hallway"
+        },
+        {
+          "src": "assets/img/listings/coulter-16.jpg",
+          "alt": "Upper-level full bathroom with tub and shower"
+        },
+        {
+          "src": "assets/img/listings/coulter-17.jpg",
+          "alt": "Full bathroom with vanity and linen tower"
+        },
+        {
+          "src": "assets/img/listings/coulter-18.jpg",
+          "alt": "Lower-level bedroom or flex room"
+        },
+        {
+          "src": "assets/img/listings/coulter-19.jpg",
+          "alt": "Lower-level kitchenette beside the staircase"
+        },
+        {
+          "src": "assets/img/listings/coulter-20.jpg",
+          "alt": "Second lower-level bedroom or flex room"
+        },
+        {
+          "src": "assets/img/listings/coulter-21.jpg",
+          "alt": "Lower-level three-piece bathroom with corner shower"
+        },
+        {
+          "src": "assets/img/listings/coulter-22.jpg",
+          "alt": "Lower-level bathroom with corner shower and vanity"
+        },
+        {
+          "src": "assets/img/listings/coulter-23.jpg",
+          "alt": "Attached garage with built-in loft storage"
+        },
+        {
+          "src": "assets/img/listings/coulter-24.jpg",
+          "alt": "Attached garage loft and shelving"
+        },
+        {
+          "src": "assets/img/listings/coulter-25.jpg",
+          "alt": "Back yard with raised deck and lawn"
+        },
+        {
+          "src": "assets/img/listings/coulter-26.jpg",
+          "alt": "Elevated view of the townhouse from the front"
+        }
+      ]
+    },
+    {
+      "mls": "202604265",
+      "status": "Active",
+      "kind": "Commercial",
+      "price": 379999,
+      "priceLabel": "$379,999",
+      "address": "302 10th Street",
+      "areaLabel": "Brandon · Downtown",
+      "area": "Downtown and East End",
+      "intent": "buy invest",
+      "office": "Sutton-Harrison Realty",
+      "spec": "Retail / mixed-use · 2 storeys · built 1898",
+      "sub": "Brandon, Manitoba  R7A4G1 · Downtown · MLS® 202604265",
+      "description": "Mixed-use building on a high-traffic downtown corner. The main floor (about 1,500 sq ft) plus basement is leased to an established restaurant tenant to February 2027, with a renewal option. The second floor is a 3-bedroom apartment (about 1,560 sq ft) rented year to year. Restaurant equipment list and income/expense analysis available. Measurements approximate; buyer to do their own due diligence.",
+      "facts": [
+        [
+          "Type",
+          "Retail / mixed-use"
+        ],
+        [
+          "Storeys",
+          "2 · 2 units"
+        ],
+        [
+          "Built",
+          "1898"
+        ],
+        [
+          "Land size",
+          "3,074 sq ft · 25 ft frontage"
+        ],
+        [
+          "Parking",
+          "Rear"
+        ],
+        [
+          "Heating",
+          "Electric baseboard"
+        ],
+        [
+          "Property taxes",
+          "$5,106.06 / year"
+        ],
+        [
+          "MLS®",
+          "202604265"
+        ]
+      ],
+      "photos": [
+        {
+          "src": "assets/img/listings/tenth-302.jpg",
+          "alt": "302 10th Street storefront from the front"
+        },
+        {
+          "src": "assets/img/listings/tenth-302-02.jpg",
+          "alt": "302 10th Street building on the corner"
+        }
+      ]
+    },
+    {
+      "mls": "202525443",
+      "status": "Active",
+      "kind": "Land",
+      "price": 570900,
+      "priceLabel": "$570,900",
+      "address": "624 Perry Street",
+      "areaLabel": "Brandon · Vic East",
+      "area": "Downtown and East End",
+      "intent": "buy invest",
+      "office": "Sutton-Harrison Realty",
+      "spec": "Vacant land · 2.19 acres · for sale or lease",
+      "sub": "Brandon, Manitoba  R7A7L2 · Vic East Industrial Park · MLS® 202525443",
+      "description": "Fully serviced 2.19-acre lot in the new Vic East Industrial Park — gas, hydro, sewer and water in place, level and drainable with a stable gravel base ready for development. Excellent access to Victoria Avenue East (PTH 1A) and Highway 110, adjacent to Assiniboine College and the East End residential subdivision, among established industrial neighbours.",
+      "facts": [
+        [
+          "Type",
+          "Vacant land — commercial mix"
+        ],
+        [
+          "Title",
+          "Freehold"
+        ],
+        [
+          "Land size",
+          "2.19 acres"
+        ],
+        [
+          "Frontage",
+          "296 ft · 322 ft deep"
+        ],
+        [
+          "Offered",
+          "For sale or lease"
+        ],
+        [
+          "MLS®",
+          "202525443"
+        ]
+      ],
+      "photos": [
+        {
+          "src": "assets/img/listings/perry-industrial-lots.jpg",
+          "alt": "Subdivision plan of the Vic East Industrial Park lots on Perry Street, Brandon"
+        }
+      ]
+    },
+    {
+      "mls": "202525452",
+      "status": "Active",
+      "kind": "Land",
+      "price": 317900,
+      "priceLabel": "$317,900",
+      "address": "529 Perry Street",
+      "areaLabel": "Brandon · Vic East",
+      "area": "Downtown and East End",
+      "intent": "buy invest",
+      "office": "Sutton-Harrison Realty",
+      "spec": "Vacant land · 1.22 acres · for sale or lease",
+      "sub": "Brandon, Manitoba  R7A7L2 · Vic East Industrial Park · MLS® 202525452",
+      "description": "Fully serviced 1.22-acre lot in the Vic East Industrial Park — gas, hydro, sewer and water in place, level drainable site with a gravel base. Access to Victoria Avenue East (PTH 1A) and Highway 110, next to Assiniboine College and the East End subdivision.",
+      "facts": [
+        [
+          "Type",
+          "Vacant land — commercial mix"
+        ],
+        [
+          "Title",
+          "Freehold"
+        ],
+        [
+          "Land size",
+          "1.22 acres"
+        ],
+        [
+          "Frontage",
+          "125 ft · 426 ft deep"
+        ],
+        [
+          "Offered",
+          "For sale or lease"
+        ],
+        [
+          "MLS®",
+          "202525452"
+        ]
+      ],
+      "photos": [
+        {
+          "src": "assets/img/listings/perry-industrial-lots.jpg",
+          "alt": "Subdivision plan of the Vic East Industrial Park lots on Perry Street, Brandon"
+        }
+      ]
+    },
+    {
+      "mls": "202610941",
+      "status": "Active",
+      "kind": "Land",
+      "price": 189900,
+      "priceLabel": "$189,900",
+      "address": "527 Grandview Street",
+      "areaLabel": "Brandon · Vic East",
+      "area": "Downtown and East End",
+      "intent": "buy invest",
+      "office": "Sutton-Harrison Realty",
+      "spec": "Vacant land · 0.62 acres · for sale or lease",
+      "sub": "Brandon, Manitoba  R7A7L2 · Vic East · MLS® 202610941",
+      "description": "IG-zoned vacant lot, 104 × 256 ft, fully serviced by summer 2026. Access to trucking routes (PTH 1A, Victoria Avenue East, Highway 110 eastern access) and high visibility from Victoria Avenue East. Walking distance from Brandon's eastern residential subdivision and next to Assiniboine College's main campus.",
+      "facts": [
+        [
+          "Type",
+          "Vacant land — commercial mix"
+        ],
+        [
+          "Title",
+          "Freehold"
+        ],
+        [
+          "Zoning",
+          "IG (general industrial)"
+        ],
+        [
+          "Land size",
+          "0.62 acres · 104 × 256 ft"
+        ],
+        [
+          "Offered",
+          "For sale or lease ($22 / sq ft)"
+        ],
+        [
+          "MLS®",
+          "202610941"
+        ]
+      ],
+      "photos": [
+        {
+          "src": "assets/img/listings/grandview-527.jpg",
+          "alt": "Graded vacant lot with services going in"
+        },
+        {
+          "src": "assets/img/listings/grandview-527-02.jpg",
+          "alt": "Vacant lot looking toward Victoria Avenue East"
+        }
+      ]
+    }
+  ]
+}

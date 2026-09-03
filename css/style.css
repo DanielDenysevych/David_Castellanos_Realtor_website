@@ -449,6 +449,7 @@ p{ margin:0 0 1em; }
 .ld__facts > div{ display:flex; gap:14px; padding:8px 0; border-bottom:1px solid var(--line); }
 .ld__facts dt{ flex:0 0 128px; color:var(--grey); }
 .ld__facts dd{ margin:0; }
+.ld__office{ font-size:12px; color:var(--grey); margin:0 0 18px; }
 
 .listings__mls{
   margin-top:clamp(38px,5vw,64px); padding:clamp(26px,4vw,44px);

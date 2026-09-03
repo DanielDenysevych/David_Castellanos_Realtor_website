@@ -1,0 +1,46 @@
+name: sync-listings
+
+# Pulls David's active listings from the CREA DDF feed and commits
+# data/listings.json when it changes. The site host redeploys on that
+# commit, so a listing added on REALTOR.ca shows up here within a few hours.
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'      # every 3 hours
+  workflow_dispatch: {}         # allow a manual run from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-listings
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sync from CREA DDF
+        env:
+          CREA_CLIENT_ID: ${{ secrets.CREA_CLIENT_ID }}
+          CREA_CLIENT_SECRET: ${{ secrets.CREA_CLIENT_SECRET }}
+          CREA_AGENT_FILTER: ${{ vars.CREA_AGENT_FILTER }}
+        run: node scripts/sync-listings.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/listings.json; then
+            echo "No listing changes."
+            exit 0
+          fi
+          git config user.name  "listings-bot"
+          git config user.email "listings-bot@users.noreply.github.com"
+          git add data/listings.json
+          git commit -m "listings: sync from CREA DDF"
+          git push

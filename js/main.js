@@ -62,12 +62,115 @@
   }
 
   /* ---------------------------------------------------
-     4. Listing cards -> detail modal
-        Each card holds a <template class="listing-card__detail">;
-        clicking the card clones it into the shared <dialog>.
+     4. Listings — built from data/listings.json, then
+        wired to the detail modal + the search filter.
+        That file is refreshed by the CREA DDF sync
+        (scripts/sync-listings.mjs / the sync-listings
+        GitHub Action); nothing here changes when a
+        listing is added or removed.
      --------------------------------------------------- */
-  var lModal = $('#listingModal');
-  var lModalBody = $('#listingModalBody');
+  var listingsGrid = $('#listingCards');
+  var lModal       = $('#listingModal');
+  var lModalBody   = $('#listingModalBody');
+  var emptyMsg     = $('#listingsEmpty');
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  function buildCard(item) {
+    var art = el('article', 'listing-card');
+    art.dataset.price  = item.price || 0;
+    art.dataset.area   = item.area || '';
+    art.dataset.intent = item.intent || 'buy invest';
+    if (item.mls) art.dataset.mls = item.mls;
+
+    var photos = (item.photos && item.photos.length) ? item.photos : [{ src: '', alt: '' }];
+
+    /* --- summary card --- */
+    var btn = el('button', 'listing-card__open');
+    btn.type = 'button';
+    btn.setAttribute('aria-haspopup', 'dialog');
+
+    var media = el('span', 'listing-card__media');
+    var cover = el('img');
+    cover.src = photos[0].src;
+    cover.alt = (item.address || 'Listing') + ', Brandon';
+    cover.loading = 'lazy';
+    media.appendChild(cover);
+    media.appendChild(el('span', 'chip chip--active', item.status || 'Active'));
+    media.appendChild(el('span', 'listing-card__kind', item.kind || ''));
+
+    var body = el('span', 'listing-card__body');
+    body.appendChild(el('span', 'listing-card__price', item.priceLabel || ''));
+    var addr = el('span', 'listing-card__addr', item.address || '');
+    addr.appendChild(el('span', null, item.areaLabel || ''));
+    body.appendChild(addr);
+    body.appendChild(el('span', 'listing-card__spec', item.spec || ''));
+    body.appendChild(el('span', 'listing-card__more', 'View details'));
+
+    btn.appendChild(media);
+    btn.appendChild(body);
+    art.appendChild(btn);
+
+    /* --- detail template (cloned into the modal on click) --- */
+    var tpl = el('template', 'listing-card__detail');
+    var ld = el('div', 'ld');
+
+    var gallery = el('div', 'ld__gallery' + (photos.length < 2 ? ' ld__gallery--single' : ''));
+    var main = el('img', 'ld__main');
+    main.src = photos[0].src;
+    main.alt = photos[0].alt || '';
+    gallery.appendChild(main);
+    if (photos.length > 1) {
+      var thumbs = el('div', 'ld__thumbs');
+      photos.forEach(function (p, i) {
+        var tb = el('button', 'ld__thumb' + (i === 0 ? ' is-active' : ''));
+        tb.type = 'button';
+        tb.dataset.full = p.src;
+        var ti = el('img');
+        ti.src = p.src; ti.alt = p.alt || ''; ti.loading = 'lazy';
+        tb.appendChild(ti);
+        thumbs.appendChild(tb);
+      });
+      gallery.appendChild(thumbs);
+    }
+    ld.appendChild(gallery);
+
+    var info = el('div', 'ld__info');
+    info.appendChild(el('p', 'ld__price', item.priceLabel || ''));
+    info.appendChild(el('h3', 'ld__addr', item.address || ''));
+    info.appendChild(el('p', 'ld__sub', item.sub || ''));
+    if (item.description) info.appendChild(el('p', 'ld__desc', item.description));
+    var dl = el('dl', 'ld__facts');
+    (item.facts || []).forEach(function (row) {
+      var d = el('div');
+      d.appendChild(el('dt', null, row[0]));
+      d.appendChild(el('dd', null, row[1]));
+      dl.appendChild(d);
+    });
+    if (dl.children.length) info.appendChild(dl);
+    if (item.office) info.appendChild(el('p', 'ld__office', 'Listed by ' + item.office));
+    var cta = el('a', 'btn btn--solid', 'Ask about this property');
+    cta.href = '#contact';
+    cta.setAttribute('data-close', '');
+    info.appendChild(cta);
+    ld.appendChild(info);
+
+    tpl.content.appendChild(ld);
+    art.appendChild(tpl);
+    return art;
+  }
+
+  function renderListings(items) {
+    if (!listingsGrid) return;
+    listingsGrid.replaceChildren();
+    items.forEach(function (it) { listingsGrid.appendChild(buildCard(it)); });
+    listingsGrid.removeAttribute('aria-busy');
+  }
 
   function closeModal() {
     if (!lModal) return;
@@ -77,8 +180,9 @@
     if (lModalBody) lModalBody.replaceChildren();
   }
 
-  if (lModal && lModalBody) {
-    $$('.listing-card__open').forEach(function (btn) {
+  function wireModalOpeners() {
+    if (!lModal || !lModalBody || !listingsGrid) return;
+    $$('.listing-card__open', listingsGrid).forEach(function (btn) {
       btn.addEventListener('click', function () {
         var card = btn.closest('.listing-card');
         var tpl = card && $('.listing-card__detail', card);
@@ -90,68 +194,41 @@
         document.body.style.overflow = 'hidden';
       });
     });
-
-    lModal.addEventListener('click', function (e) {
-      // backdrop click (dialog itself) or any [data-close] element
-      if (e.target === lModal || e.target.closest('[data-close]')) closeModal();
-
-      // in-modal gallery thumbnail
-      var thumb = e.target.closest('.ld__thumb');
-      if (thumb) {
-        var main = $('.ld__main', lModal);
-        var img = $('img', thumb);
-        if (main) { main.src = thumb.dataset.full; if (img) main.alt = img.alt; }
-        $$('.ld__thumb', lModal).forEach(function (t) { t.classList.remove('is-active'); });
-        thumb.classList.add('is-active');
-      }
-    });
-    lModal.addEventListener('close', function () {
-      document.body.style.overflow = '';
-      lModalBody.replaceChildren();
-    });
-    lModal.addEventListener('cancel', function () { document.body.style.overflow = ''; });
   }
 
-  /* ---------------------------------------------------
-     5. Listing search — filters the listings in place.
-        Each listing carries data-price / data-area /
-        data-intent; "Sell" jumps to the valuation section
-        instead. Swap in a real MLS feed later and this
-        same markup keeps working.
-     --------------------------------------------------- */
-  var listingSearch = $('#listingSearch');
-  if (listingSearch) {
+  function budgetBounds(v) {
+    switch (v) {
+      case 'Under $250,000':       return [0, 249999];
+      case '$250,000 to $400,000': return [250000, 400000];
+      case '$400,000 to $600,000': return [400000, 600000];
+      case 'Over $600,000':        return [600001, Infinity];
+      default:                     return [0, Infinity]; // "Any"
+    }
+  }
+
+  function wireSearch() {
+    var listingSearch = $('#listingSearch');
+    if (!listingSearch) return;
+
     var intent = 'buy';
     var intentToggle = $('#intentToggle');
     if (intentToggle) {
       intentToggle.addEventListener('click', function (e) {
-        var btn = e.target.closest('button');
-        if (!btn) return;
-        $$('button', intentToggle).forEach(function (b) { b.classList.remove('is-active'); });
-        btn.classList.add('is-active');
-        intent = btn.dataset.intent;
+        var b = e.target.closest('button');
+        if (!b) return;
+        $$('button', intentToggle).forEach(function (x) { x.classList.remove('is-active'); });
+        b.classList.add('is-active');
+        intent = b.dataset.intent;
       });
     }
 
-    var listingCards = $$('#listingCards .listing-card');
-    var emptyMsg = $('#listingsEmpty');
-
-    function budgetBounds(v) {
-      switch (v) {
-        case 'Under $250,000':       return [0, 249999];
-        case '$250,000 to $400,000': return [250000, 400000];
-        case '$400,000 to $600,000': return [400000, 600000];
-        case 'Over $600,000':        return [600001, Infinity];
-        default:                     return [0, Infinity]; // "Any"
-      }
-    }
+    var cards = $$('#listingCards .listing-card');
 
     function runSearch() {
       var area = $('#areaSelect').value;
       var bounds = budgetBounds($('#budgetSelect').value);
       var shown = 0;
-
-      listingCards.forEach(function (card) {
+      cards.forEach(function (card) {
         var price = parseFloat(card.dataset.price) || 0;
         var intents = (card.dataset.intent || 'buy').split(/\s+/);
         var match =
@@ -161,28 +238,61 @@
         card.classList.toggle('is-hidden', !match);
         if (match) shown++;
       });
-
       if (emptyMsg) emptyMsg.hidden = shown > 0;
       return shown;
     }
 
     listingSearch.addEventListener('submit', function (e) {
       e.preventDefault();
-
       if (intent === 'sell') {
         var val = $('#valuation');
         if (val) val.scrollIntoView({ behavior: 'smooth' });
         return;
       }
-
       runSearch();
       var anchor = $('#listingCards .listing-card:not(.is-hidden)') || emptyMsg;
       if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   }
 
+  if (listingsGrid) {
+    /* modal chrome — attached once, works for any cloned detail */
+    if (lModal && lModalBody) {
+      lModal.addEventListener('click', function (e) {
+        if (e.target === lModal || e.target.closest('[data-close]')) { closeModal(); return; }
+        var thumb = e.target.closest('.ld__thumb');
+        if (thumb) {
+          var main = $('.ld__main', lModal);
+          var img = $('img', thumb);
+          if (main) { main.src = thumb.dataset.full; if (img) main.alt = img.alt; }
+          $$('.ld__thumb', lModal).forEach(function (t) { t.classList.remove('is-active'); });
+          thumb.classList.add('is-active');
+        }
+      });
+      lModal.addEventListener('close', function () {
+        document.body.style.overflow = '';
+        lModalBody.replaceChildren();
+      });
+      lModal.addEventListener('cancel', function () { document.body.style.overflow = ''; });
+    }
+
+    fetch('data/listings.json', { cache: 'no-cache' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (doc) {
+        var items = (doc && doc.listings) || [];
+        renderListings(items);
+        wireModalOpeners();
+        wireSearch();
+        if (!items.length && emptyMsg) emptyMsg.hidden = false;
+      })
+      .catch(function () {
+        listingsGrid.removeAttribute('aria-busy');
+        if (emptyMsg) emptyMsg.hidden = false;
+      });
+  }
+
   /* ---------------------------------------------------
-     6. Mortgage calculator (Canadian semi-annual compounding)
+     5. Mortgage calculator (Canadian semi-annual compounding)
      --------------------------------------------------- */
   var cPrice = $('#cPrice');
   var cDown  = $('#cDown');
@@ -254,7 +364,7 @@
   }
 
   /* ---------------------------------------------------
-     7. Review slider
+     6. Review slider
      --------------------------------------------------- */
   var track = $('#quotesTrack');
   if (track) {
@@ -289,7 +399,7 @@
   }
 
   /* ---------------------------------------------------
-     8. Forms — placeholder handlers
+     7. Forms — placeholder handlers
         Replace with a real endpoint (Formspree, OpnForm,
         n8n webhook) before launch.
      --------------------------------------------------- */
@@ -307,7 +417,7 @@
   stubForm('#contactForm', '#contactNote');
 
   /* ---------------------------------------------------
-     9. Footer year
+     8. Footer year
      --------------------------------------------------- */
   var year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
