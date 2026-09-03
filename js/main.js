@@ -62,20 +62,54 @@
   }
 
   /* ---------------------------------------------------
-     4. Featured listing gallery
+     4. Listing cards -> detail modal
+        Each card holds a <template class="listing-card__detail">;
+        clicking the card clones it into the shared <dialog>.
      --------------------------------------------------- */
-  var gThumbs = $('#galleryThumbs');
-  var gMain   = $('#galleryMain');
-  if (gThumbs && gMain) {
-    gThumbs.addEventListener('click', function (e) {
-      var btn = e.target.closest('.feature__thumb');
-      if (!btn) return;
-      var img = $('img', btn);
-      gMain.src = btn.dataset.full;
-      gMain.alt = img ? img.alt : gMain.alt;
-      $$('.feature__thumb', gThumbs).forEach(function (b) { b.classList.remove('is-active'); });
-      btn.classList.add('is-active');
+  var lModal = $('#listingModal');
+  var lModalBody = $('#listingModalBody');
+
+  function closeModal() {
+    if (!lModal) return;
+    if (lModal.close) lModal.close();
+    else lModal.removeAttribute('open');
+    document.body.style.overflow = '';
+    if (lModalBody) lModalBody.replaceChildren();
+  }
+
+  if (lModal && lModalBody) {
+    $$('.listing-card__open').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var card = btn.closest('.listing-card');
+        var tpl = card && $('.listing-card__detail', card);
+        if (!tpl) return;
+        lModalBody.replaceChildren(tpl.content.cloneNode(true));
+        lModalBody.scrollTop = 0;
+        if (lModal.showModal) lModal.showModal();
+        else lModal.setAttribute('open', '');
+        document.body.style.overflow = 'hidden';
+      });
     });
+
+    lModal.addEventListener('click', function (e) {
+      // backdrop click (dialog itself) or any [data-close] element
+      if (e.target === lModal || e.target.closest('[data-close]')) closeModal();
+
+      // in-modal gallery thumbnail
+      var thumb = e.target.closest('.ld__thumb');
+      if (thumb) {
+        var main = $('.ld__main', lModal);
+        var img = $('img', thumb);
+        if (main) { main.src = thumb.dataset.full; if (img) main.alt = img.alt; }
+        $$('.ld__thumb', lModal).forEach(function (t) { t.classList.remove('is-active'); });
+        thumb.classList.add('is-active');
+      }
+    });
+    lModal.addEventListener('close', function () {
+      document.body.style.overflow = '';
+      lModalBody.replaceChildren();
+    });
+    lModal.addEventListener('cancel', function () { document.body.style.overflow = ''; });
   }
 
   /* ---------------------------------------------------
@@ -99,9 +133,8 @@
       });
     }
 
-    var listingCards = $$('#listings [data-price]');
+    var listingCards = $$('#listingCards .listing-card');
     var emptyMsg = $('#listingsEmpty');
-    var commercial = $('#listingsCommercial');
 
     function budgetBounds(v) {
       switch (v) {
@@ -129,14 +162,6 @@
         if (match) shown++;
       });
 
-      // hide the "Commercial & land" block when none of its cards show
-      if (commercial) {
-        var anyComm = $$('.listing-card', commercial).some(function (c) {
-          return !c.classList.contains('is-hidden');
-        });
-        commercial.classList.toggle('is-hidden', !anyComm);
-      }
-
       if (emptyMsg) emptyMsg.hidden = shown > 0;
       return shown;
     }
@@ -151,7 +176,7 @@
       }
 
       runSearch();
-      var anchor = $('#listings [data-price]:not(.is-hidden)') || emptyMsg;
+      var anchor = $('#listingCards .listing-card:not(.is-hidden)') || emptyMsg;
       if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   }

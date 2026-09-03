@@ -205,139 +205,246 @@
       <button type="submit" class="btn btn--solid listing-search__go" id="searchGo">Search</button>
     </form>
 
-    <article class="feature" data-price="399000" data-area="Woodlands" data-intent="buy invest">
-      <div class="feature__gallery">
-        <figure class="feature__stage">
-          <img id="galleryMain" src="assets/img/listings/coulter-01.jpg"
-               alt="20 Coulter Way, Brandon — front exterior of the townhouse" width="1024" height="682">
-          <span class="chip chip--active">Active</span>
-        </figure>
-        <div class="feature__thumbs" id="galleryThumbs">
-          <button type="button" class="feature__thumb is-active" data-full="assets/img/listings/coulter-01.jpg"><img src="assets/img/listings/coulter-01.jpg" alt="Front exterior of the townhouse, unit 20 with attached garage" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-02.jpg"><img src="assets/img/listings/coulter-02.jpg" alt="Open-concept living room, dining area and kitchen" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-03.jpg"><img src="assets/img/listings/coulter-03.jpg" alt="Living room looking toward the kitchen" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-04.jpg"><img src="assets/img/listings/coulter-04.jpg" alt="Dining area and kitchen with stainless steel appliances" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-05.jpg"><img src="assets/img/listings/coulter-05.jpg" alt="Kitchen with centre island, stainless appliances and pantry" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-06.jpg"><img src="assets/img/listings/coulter-06.jpg" alt="Main-floor two-piece powder room" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-07.jpg"><img src="assets/img/listings/coulter-07.jpg" alt="Front entry and staircase" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-08.jpg"><img src="assets/img/listings/coulter-08.jpg" alt="Upper-level staircase and landing" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-09.jpg"><img src="assets/img/listings/coulter-09.jpg" alt="Primary bedroom" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-10.jpg"><img src="assets/img/listings/coulter-10.jpg" alt="Primary bedroom with walk-in closet" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-11.jpg"><img src="assets/img/listings/coulter-11.jpg" alt="Second bedroom with mirrored closet" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-12.jpg"><img src="assets/img/listings/coulter-12.jpg" alt="Third bedroom with window overlooking the neighbourhood" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-13.jpg"><img src="assets/img/listings/coulter-13.jpg" alt="Bedroom with double mirrored closet" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-14.jpg"><img src="assets/img/listings/coulter-14.jpg" alt="Upper-level hallway with linen closet" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-15.jpg"><img src="assets/img/listings/coulter-15.jpg" alt="Bedrooms off the upper-level hallway" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-16.jpg"><img src="assets/img/listings/coulter-16.jpg" alt="Upper-level full bathroom with tub and shower" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-17.jpg"><img src="assets/img/listings/coulter-17.jpg" alt="Full bathroom with vanity and linen tower" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-18.jpg"><img src="assets/img/listings/coulter-18.jpg" alt="Lower-level bedroom or flex room" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-19.jpg"><img src="assets/img/listings/coulter-19.jpg" alt="Lower-level kitchenette beside the staircase" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-20.jpg"><img src="assets/img/listings/coulter-20.jpg" alt="Second lower-level bedroom or flex room" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-21.jpg"><img src="assets/img/listings/coulter-21.jpg" alt="Lower-level three-piece bathroom with corner shower" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-22.jpg"><img src="assets/img/listings/coulter-22.jpg" alt="Lower-level bathroom with corner shower and vanity" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-23.jpg"><img src="assets/img/listings/coulter-23.jpg" alt="Attached garage with built-in loft storage" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-24.jpg"><img src="assets/img/listings/coulter-24.jpg" alt="Attached garage loft and shelving" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-25.jpg"><img src="assets/img/listings/coulter-25.jpg" alt="Back yard with raised deck and lawn" loading="lazy"></button>
-          <button type="button" class="feature__thumb" data-full="assets/img/listings/coulter-26.jpg"><img src="assets/img/listings/coulter-26.jpg" alt="Elevated view of the townhouse from the front" loading="lazy"></button>
-        </div>
-      </div>
+    <div class="listing-cards" id="listingCards">
 
-      <div class="feature__info">
-        <p class="feature__price">$399,000</p>
-        <h3 class="feature__addr">20 Coulter Way<span>Brandon, Manitoba&nbsp;&nbsp;R7A2V1 · Woodlands</span></h3>
+      <article class="listing-card" data-price="399000" data-area="Woodlands" data-intent="buy invest">
+        <button type="button" class="listing-card__open" aria-haspopup="dialog">
+          <span class="listing-card__media">
+            <img src="assets/img/listings/coulter-01.jpg" alt="20 Coulter Way, Brandon — front exterior of the townhouse" loading="lazy">
+            <span class="chip chip--active">Active</span>
+            <span class="listing-card__kind">House</span>
+          </span>
+          <span class="listing-card__body">
+            <span class="listing-card__price">$399,000</span>
+            <span class="listing-card__addr">20 Coulter Way<span>Brandon · Woodlands</span></span>
+            <span class="listing-card__spec">5 bed · 3 bath · 1,454 sq ft · built 2008</span>
+            <span class="listing-card__more">View details</span>
+          </span>
+        </button>
+        <template class="listing-card__detail">
+          <div class="ld">
+            <div class="ld__gallery">
+              <img class="ld__main" src="assets/img/listings/coulter-01.jpg" alt="20 Coulter Way, Brandon — front exterior of the townhouse">
+              <div class="ld__thumbs">
+            <button type="button" class="ld__thumb is-active" data-full="assets/img/listings/coulter-01.jpg"><img src="assets/img/listings/coulter-01.jpg" alt="Front exterior of the townhouse, unit 20 with attached garage" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-02.jpg"><img src="assets/img/listings/coulter-02.jpg" alt="Open-concept living room, dining area and kitchen" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-03.jpg"><img src="assets/img/listings/coulter-03.jpg" alt="Living room looking toward the kitchen" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-04.jpg"><img src="assets/img/listings/coulter-04.jpg" alt="Dining area and kitchen with stainless steel appliances" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-05.jpg"><img src="assets/img/listings/coulter-05.jpg" alt="Kitchen with centre island, stainless appliances and pantry" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-06.jpg"><img src="assets/img/listings/coulter-06.jpg" alt="Main-floor two-piece powder room" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-07.jpg"><img src="assets/img/listings/coulter-07.jpg" alt="Front entry and staircase" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-08.jpg"><img src="assets/img/listings/coulter-08.jpg" alt="Upper-level staircase and landing" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-09.jpg"><img src="assets/img/listings/coulter-09.jpg" alt="Primary bedroom" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-10.jpg"><img src="assets/img/listings/coulter-10.jpg" alt="Primary bedroom with walk-in closet" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-11.jpg"><img src="assets/img/listings/coulter-11.jpg" alt="Second bedroom with mirrored closet" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-12.jpg"><img src="assets/img/listings/coulter-12.jpg" alt="Third bedroom with window overlooking the neighbourhood" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-13.jpg"><img src="assets/img/listings/coulter-13.jpg" alt="Bedroom with double mirrored closet" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-14.jpg"><img src="assets/img/listings/coulter-14.jpg" alt="Upper-level hallway with linen closet" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-15.jpg"><img src="assets/img/listings/coulter-15.jpg" alt="Bedrooms off the upper-level hallway" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-16.jpg"><img src="assets/img/listings/coulter-16.jpg" alt="Upper-level full bathroom with tub and shower" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-17.jpg"><img src="assets/img/listings/coulter-17.jpg" alt="Full bathroom with vanity and linen tower" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-18.jpg"><img src="assets/img/listings/coulter-18.jpg" alt="Lower-level bedroom or flex room" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-19.jpg"><img src="assets/img/listings/coulter-19.jpg" alt="Lower-level kitchenette beside the staircase" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-20.jpg"><img src="assets/img/listings/coulter-20.jpg" alt="Second lower-level bedroom or flex room" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-21.jpg"><img src="assets/img/listings/coulter-21.jpg" alt="Lower-level three-piece bathroom with corner shower" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-22.jpg"><img src="assets/img/listings/coulter-22.jpg" alt="Lower-level bathroom with corner shower and vanity" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-23.jpg"><img src="assets/img/listings/coulter-23.jpg" alt="Attached garage with built-in loft storage" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-24.jpg"><img src="assets/img/listings/coulter-24.jpg" alt="Attached garage loft and shelving" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-25.jpg"><img src="assets/img/listings/coulter-25.jpg" alt="Back yard with raised deck and lawn" loading="lazy"></button>
+            <button type="button" class="ld__thumb" data-full="assets/img/listings/coulter-26.jpg"><img src="assets/img/listings/coulter-26.jpg" alt="Elevated view of the townhouse from the front" loading="lazy"></button>
+              </div>
+            </div>
+            <div class="ld__info">
+              <p class="ld__price">$399,000</p>
+              <h3 class="ld__addr">20 Coulter Way</h3>
+              <p class="ld__sub">Brandon, Manitoba&nbsp;&nbsp;R7A2V1 · Woodlands · MLS&reg; 202612563</p>
+              <p class="ld__desc">Spacious 3+2 bedroom, 2.5-bathroom condo in the desirable Woodlands area of Brandon. An open main floor connects the living room, dining area and kitchen. Three bedrooms sit on the upper level, with two more rooms downstairs for bedrooms, an office or storage. Close to schools, shopping, parks and walking pathways.</p>
+              <dl class="ld__facts">
+                <div><dt>Type</dt><dd>Row / townhouse — freehold condo</dd></div>
+                <div><dt>Bedrooms</dt><dd>5 (3 up + 2 down)</dd></div>
+                <div><dt>Bathrooms</dt><dd>3</dd></div>
+                <div><dt>Size</dt><dd>1,454 sq ft · built 2008</dd></div>
+                <div><dt>Condo fee</dt><dd>$340 / month (water, landscaping, management, reserve)</dd></div>
+                <div><dt>Property taxes</dt><dd>$4,336 / year</dd></div>
+                <div><dt>Parking</dt><dd>Attached single garage</dd></div>
+                <div><dt>Heating &amp; cooling</dt><dd>Forced-air natural gas, central A/C, HRV</dd></div>
+                <div><dt>Lot</dt><dd>2,560 sq ft · 22 ft frontage</dd></div>
+                <div><dt>MLS&reg;</dt><dd>202612563</dd></div>
+              </dl>
+              <a href="#contact" class="btn btn--solid" data-close>Ask about this property</a>
+            </div>
+          </div>
+        </template>
+      </article>
 
-        <ul class="feature__specs">
-          <li><b>5</b> bedrooms</li>
-          <li><b>3</b> bathrooms</li>
-          <li><b>1,454</b> sq ft</li>
-          <li>Built <b>2008</b></li>
-        </ul>
-
-        <p class="feature__desc">Spacious 3+2 bedroom, 2.5-bathroom condo in the desirable Woodlands area of Brandon. An open main floor connects the living room, dining area and kitchen. Three bedrooms sit on the upper level, with two more rooms downstairs for bedrooms, an office or storage. Close to schools, shopping, parks and walking pathways, with easy access to much of what Brandon has to offer.</p>
-
-        <dl class="feature__facts">
-          <div><dt>Type</dt><dd>Row / townhouse — freehold condo</dd></div>
-          <div><dt>Condo fee</dt><dd>$340 / month (water, landscaping, management, reserve)</dd></div>
-          <div><dt>Property taxes</dt><dd>$4,336 / year</dd></div>
-          <div><dt>Parking</dt><dd>Attached single garage</dd></div>
-          <div><dt>Heating &amp; cooling</dt><dd>Forced-air natural gas, central A/C, HRV</dd></div>
-          <div><dt>Lot</dt><dd>2,560 sq ft · 22 ft frontage</dd></div>
-          <div><dt>MLS®</dt><dd>202612563</dd></div>
-        </dl>
-
-        <div class="feature__cta">
-          <a href="#contact" class="btn btn--solid">Book a showing</a>
-          <a href="#contact" class="btn btn--outline">Ask about this home</a>
-        </div>
-      </div>
-    </article>
-
-    <div class="listings__commercial" id="listingsCommercial">
-      <h3 class="listings__subhead">Commercial &amp; land</h3>
-      <div class="listing-cards">
-
-        <article class="listing-card" data-price="379999" data-area="Downtown and East End" data-intent="invest">
-          <div class="listing-card__media">
+      <article class="listing-card" data-price="379999" data-area="Downtown and East End" data-intent="buy invest">
+        <button type="button" class="listing-card__open" aria-haspopup="dialog">
+          <span class="listing-card__media">
             <img src="assets/img/listings/tenth-302.jpg" alt="302 10th Street, Brandon — two-storey mixed-use building on a corner" loading="lazy">
             <span class="chip chip--active">Active</span>
             <span class="listing-card__kind">Commercial</span>
+          </span>
+          <span class="listing-card__body">
+            <span class="listing-card__price">$379,999</span>
+            <span class="listing-card__addr">302 10th Street<span>Brandon · Downtown</span></span>
+            <span class="listing-card__spec">Retail / mixed-use · 2 storeys · built 1898</span>
+            <span class="listing-card__more">View details</span>
+          </span>
+        </button>
+        <template class="listing-card__detail">
+          <div class="ld">
+            <div class="ld__gallery">
+              <img class="ld__main" src="assets/img/listings/tenth-302.jpg" alt="302 10th Street, Brandon — mixed-use building">
+              <div class="ld__thumbs">
+                <button type="button" class="ld__thumb is-active" data-full="assets/img/listings/tenth-302.jpg"><img src="assets/img/listings/tenth-302.jpg" alt="302 10th Street storefront from the front" loading="lazy"></button>
+                <button type="button" class="ld__thumb" data-full="assets/img/listings/tenth-302-02.jpg"><img src="assets/img/listings/tenth-302-02.jpg" alt="302 10th Street building on the corner" loading="lazy"></button>
+              </div>
+            </div>
+            <div class="ld__info">
+              <p class="ld__price">$379,999</p>
+              <h3 class="ld__addr">302 10th Street</h3>
+              <p class="ld__sub">Brandon, Manitoba&nbsp;&nbsp;R7A4G1 · Downtown · MLS&reg; 202604265</p>
+              <p class="ld__desc">Mixed-use building on a high-traffic downtown corner. The main floor (about 1,500 sq ft) plus basement is leased to an established restaurant tenant to February 2027, with a renewal option. The second floor is a 3-bedroom apartment (about 1,560 sq ft) rented year to year. Restaurant equipment list and income/expense analysis available. Measurements approximate; buyer to do their own due diligence.</p>
+              <dl class="ld__facts">
+                <div><dt>Type</dt><dd>Retail / mixed-use</dd></div>
+                <div><dt>Storeys</dt><dd>2 · 2 units</dd></div>
+                <div><dt>Built</dt><dd>1898</dd></div>
+                <div><dt>Land size</dt><dd>3,074 sq ft · 25 ft frontage</dd></div>
+                <div><dt>Parking</dt><dd>Rear</dd></div>
+                <div><dt>Heating</dt><dd>Electric baseboard</dd></div>
+                <div><dt>Property taxes</dt><dd>$5,106.06 / year</dd></div>
+                <div><dt>MLS&reg;</dt><dd>202604265</dd></div>
+              </dl>
+              <a href="#contact" class="btn btn--solid" data-close>Ask about this property</a>
+            </div>
           </div>
-          <div class="listing-card__body">
-            <p class="listing-card__price">$379,999</p>
-            <h4 class="listing-card__addr">302 10th Street<span>Brandon · Downtown</span></h4>
-            <p class="listing-card__spec">Retail / mixed-use · 2 storeys · built 1898 · $5,106/yr taxes</p>
-            <p class="listing-card__desc">Mixed-use building on a high-traffic corner: main-floor restaurant tenant (lease to Feb 2027) plus a 3-bedroom apartment upstairs. Steady rental income.</p>
-            <a href="#contact" class="link-arrow">Ask about this property</a>
-          </div>
-        </article>
+        </template>
+      </article>
 
-        <article class="listing-card" data-price="570900" data-area="Downtown and East End" data-intent="invest">
-          <div class="listing-card__media">
+      <article class="listing-card" data-price="570900" data-area="Downtown and East End" data-intent="buy invest">
+        <button type="button" class="listing-card__open" aria-haspopup="dialog">
+          <span class="listing-card__media">
             <img src="assets/img/listings/perry-industrial-lots.jpg" alt="Subdivision plan of the Vic East Industrial Park lots on Perry Street, Brandon" loading="lazy">
             <span class="chip chip--active">Active</span>
             <span class="listing-card__kind">Land</span>
+          </span>
+          <span class="listing-card__body">
+            <span class="listing-card__price">$570,900</span>
+            <span class="listing-card__addr">624 Perry Street<span>Brandon · Vic East</span></span>
+            <span class="listing-card__spec">Vacant land · 2.19 acres · for sale or lease</span>
+            <span class="listing-card__more">View details</span>
+          </span>
+        </button>
+        <template class="listing-card__detail">
+          <div class="ld">
+            <div class="ld__gallery ld__gallery--single">
+              <img class="ld__main" src="assets/img/listings/perry-industrial-lots.jpg" alt="Subdivision plan of the Vic East Industrial Park lots on Perry Street, Brandon">
+            </div>
+            <div class="ld__info">
+              <p class="ld__price">$570,900</p>
+              <h3 class="ld__addr">624 Perry Street</h3>
+              <p class="ld__sub">Brandon, Manitoba&nbsp;&nbsp;R7A7L2 · Vic East Industrial Park · MLS&reg; 202525443</p>
+              <p class="ld__desc">Fully serviced 2.19-acre lot in the new Vic East Industrial Park — gas, hydro, sewer and water in place, level and drainable with a stable gravel base ready for development. Excellent access to Victoria Avenue East (PTH 1A) and Highway 110, adjacent to Assiniboine College and the East End residential subdivision, among established industrial neighbours.</p>
+              <dl class="ld__facts">
+                <div><dt>Type</dt><dd>Vacant land — commercial mix</dd></div>
+                <div><dt>Title</dt><dd>Freehold</dd></div>
+                <div><dt>Land size</dt><dd>2.19 acres</dd></div>
+                <div><dt>Frontage</dt><dd>296 ft · 322 ft deep</dd></div>
+                <div><dt>Offered</dt><dd>For sale or lease</dd></div>
+                <div><dt>MLS&reg;</dt><dd>202525443</dd></div>
+              </dl>
+              <a href="#contact" class="btn btn--solid" data-close>Ask about this property</a>
+            </div>
           </div>
-          <div class="listing-card__body">
-            <p class="listing-card__price">$570,900</p>
-            <h4 class="listing-card__addr">624 Perry Street<span>Brandon · Vic East Industrial Park</span></h4>
-            <p class="listing-card__spec">Vacant land · 2.19 acres · 296 ft frontage · for sale or lease</p>
-            <p class="listing-card__desc">Fully serviced industrial lot in the new Vic East Industrial Park — gas, hydro, sewer and water in place, level gravel base, quick access to Victoria Avenue East and Highway 110.</p>
-            <a href="#contact" class="link-arrow">Ask about this property</a>
-          </div>
-        </article>
+        </template>
+      </article>
 
-        <article class="listing-card" data-price="317900" data-area="Downtown and East End" data-intent="invest">
-          <div class="listing-card__media">
+      <article class="listing-card" data-price="317900" data-area="Downtown and East End" data-intent="buy invest">
+        <button type="button" class="listing-card__open" aria-haspopup="dialog">
+          <span class="listing-card__media">
             <img src="assets/img/listings/perry-industrial-lots.jpg" alt="Subdivision plan of the Vic East Industrial Park lots on Perry Street, Brandon" loading="lazy">
             <span class="chip chip--active">Active</span>
             <span class="listing-card__kind">Land</span>
+          </span>
+          <span class="listing-card__body">
+            <span class="listing-card__price">$317,900</span>
+            <span class="listing-card__addr">529 Perry Street<span>Brandon · Vic East</span></span>
+            <span class="listing-card__spec">Vacant land · 1.22 acres · for sale or lease</span>
+            <span class="listing-card__more">View details</span>
+          </span>
+        </button>
+        <template class="listing-card__detail">
+          <div class="ld">
+            <div class="ld__gallery ld__gallery--single">
+              <img class="ld__main" src="assets/img/listings/perry-industrial-lots.jpg" alt="Subdivision plan of the Vic East Industrial Park lots on Perry Street, Brandon">
+            </div>
+            <div class="ld__info">
+              <p class="ld__price">$317,900</p>
+              <h3 class="ld__addr">529 Perry Street</h3>
+              <p class="ld__sub">Brandon, Manitoba&nbsp;&nbsp;R7A7L2 · Vic East Industrial Park · MLS&reg; 202525452</p>
+              <p class="ld__desc">Fully serviced 1.22-acre lot in the Vic East Industrial Park — gas, hydro, sewer and water in place, level drainable site with a gravel base. Access to Victoria Avenue East (PTH 1A) and Highway 110, next to Assiniboine College and the East End subdivision.</p>
+              <dl class="ld__facts">
+                <div><dt>Type</dt><dd>Vacant land — commercial mix</dd></div>
+                <div><dt>Title</dt><dd>Freehold</dd></div>
+                <div><dt>Land size</dt><dd>1.22 acres</dd></div>
+                <div><dt>Frontage</dt><dd>125 ft · 426 ft deep</dd></div>
+                <div><dt>Offered</dt><dd>For sale or lease</dd></div>
+                <div><dt>MLS&reg;</dt><dd>202525452</dd></div>
+              </dl>
+              <a href="#contact" class="btn btn--solid" data-close>Ask about this property</a>
+            </div>
           </div>
-          <div class="listing-card__body">
-            <p class="listing-card__price">$317,900</p>
-            <h4 class="listing-card__addr">529 Perry Street<span>Brandon · Vic East Industrial Park</span></h4>
-            <p class="listing-card__spec">Vacant land · 1.22 acres · 125 ft frontage · for sale or lease</p>
-            <p class="listing-card__desc">Fully serviced 1.22-acre industrial lot next to Assiniboine College and the East End subdivision. Gas, hydro, sewer and water in place.</p>
-            <a href="#contact" class="link-arrow">Ask about this property</a>
-          </div>
-        </article>
+        </template>
+      </article>
 
-        <article class="listing-card" data-price="189900" data-area="Downtown and East End" data-intent="invest">
-          <div class="listing-card__media">
+      <article class="listing-card" data-price="189900" data-area="Downtown and East End" data-intent="buy invest">
+        <button type="button" class="listing-card__open" aria-haspopup="dialog">
+          <span class="listing-card__media">
             <img src="assets/img/listings/grandview-527.jpg" alt="527 Grandview Street, Brandon — graded vacant lot with services going in" loading="lazy">
             <span class="chip chip--active">Active</span>
             <span class="listing-card__kind">Land</span>
+          </span>
+          <span class="listing-card__body">
+            <span class="listing-card__price">$189,900</span>
+            <span class="listing-card__addr">527 Grandview Street<span>Brandon · Vic East</span></span>
+            <span class="listing-card__spec">Vacant land · 0.62 acres · for sale or lease</span>
+            <span class="listing-card__more">View details</span>
+          </span>
+        </button>
+        <template class="listing-card__detail">
+          <div class="ld">
+            <div class="ld__gallery">
+              <img class="ld__main" src="assets/img/listings/grandview-527.jpg" alt="527 Grandview Street, Brandon — graded vacant lot">
+              <div class="ld__thumbs">
+                <button type="button" class="ld__thumb is-active" data-full="assets/img/listings/grandview-527.jpg"><img src="assets/img/listings/grandview-527.jpg" alt="Graded vacant lot with services going in" loading="lazy"></button>
+                <button type="button" class="ld__thumb" data-full="assets/img/listings/grandview-527-02.jpg"><img src="assets/img/listings/grandview-527-02.jpg" alt="Vacant lot looking toward Victoria Avenue East" loading="lazy"></button>
+              </div>
+            </div>
+            <div class="ld__info">
+              <p class="ld__price">$189,900</p>
+              <h3 class="ld__addr">527 Grandview Street</h3>
+              <p class="ld__sub">Brandon, Manitoba&nbsp;&nbsp;R7A7L2 · Vic East · MLS&reg; 202610941</p>
+              <p class="ld__desc">IG-zoned vacant lot, 104 × 256 ft, fully serviced by summer 2026. Access to trucking routes (PTH 1A, Victoria Avenue East, Highway 110 eastern access) and high visibility from Victoria Avenue East. Walking distance from Brandon's eastern residential subdivision and next to Assiniboine College's main campus.</p>
+              <dl class="ld__facts">
+                <div><dt>Type</dt><dd>Vacant land — commercial mix</dd></div>
+                <div><dt>Title</dt><dd>Freehold</dd></div>
+                <div><dt>Zoning</dt><dd>IG (general industrial)</dd></div>
+                <div><dt>Land size</dt><dd>0.62 acres · 104 × 256 ft</dd></div>
+                <div><dt>Offered</dt><dd>For sale or lease ($22 / sq ft)</dd></div>
+                <div><dt>MLS&reg;</dt><dd>202610941</dd></div>
+              </dl>
+              <a href="#contact" class="btn btn--solid" data-close>Ask about this property</a>
+            </div>
           </div>
-          <div class="listing-card__body">
-            <p class="listing-card__price">$189,900</p>
-            <h4 class="listing-card__addr">527 Grandview Street<span>Brandon · Vic East</span></h4>
-            <p class="listing-card__spec">Vacant land · 0.62 acres · 104 × 256 ft · for sale or lease</p>
-            <p class="listing-card__desc">IG-zoned vacant lot, fully serviced by summer 2026. High visibility from Victoria Avenue East, walking distance to Assiniboine College.</p>
-            <a href="#contact" class="link-arrow">Ask about this property</a>
-          </div>
-        </article>
+        </template>
+      </article>
 
-      </div>
     </div>
+
+    <dialog class="listing-modal" id="listingModal" aria-label="Listing details">
+      <button type="button" class="listing-modal__x" aria-label="Close details" data-close>&times;</button>
+      <div class="listing-modal__body" id="listingModalBody"></div>
+    </dialog>
 
     <p class="listings__empty" id="listingsEmpty" aria-live="polite" hidden>
       Nothing I have listed right now matches that search.
