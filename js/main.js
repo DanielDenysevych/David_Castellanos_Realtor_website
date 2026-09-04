@@ -422,4 +422,32 @@
   var year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
 
+  /* ---------------------------------------------------
+     9. Video card — cursor tilt + a spotlight that
+        follows the pointer. Skipped on touch/coarse
+        pointers and when the OS asks for less motion.
+     --------------------------------------------------- */
+  var canTilt = window.matchMedia &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (canTilt) {
+    $$('.video-card__media').forEach(function (card) {
+      var maxDeg = 6;
+      card.addEventListener('mousemove', function (e) {
+        var r = card.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width;
+        var y = (e.clientY - r.top) / r.height;
+        var rotY = (x - 0.5) * maxDeg * 2;
+        var rotX = (0.5 - y) * maxDeg * 2;
+        card.style.transform = 'rotateX(' + rotX.toFixed(2) + 'deg) rotateY(' + rotY.toFixed(2) + 'deg)';
+        card.style.setProperty('--mx', (x * 100).toFixed(1) + '%');
+        card.style.setProperty('--my', (y * 100).toFixed(1) + '%');
+      });
+      card.addEventListener('mouseleave', function () {
+        card.style.transform = 'rotateX(0) rotateY(0)';
+      });
+    });
+  }
+
 })();
