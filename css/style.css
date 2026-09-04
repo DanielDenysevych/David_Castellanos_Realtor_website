@@ -461,6 +461,11 @@ p{ margin:0 0 1em; }
 .videos .media-slot__tag{ background:var(--paper); color:var(--ink); }
 .videos .media-slot__name{ color:#fff; }
 .videos .media-slot__spec{ color:rgba(255,255,255,.55); }
+.video-card__media{
+  position:relative; aspect-ratio:var(--ar, 16 / 9);
+  border-radius:var(--r); overflow:hidden; background:var(--ink-2);
+}
+.video-card__media video{ width:100%; height:100%; object-fit:cover; display:block; }
 .videos__grid{
   display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:clamp(18px,2.4vw,28px);
   align-items:start;

@@ -53,7 +53,7 @@ block** with the real `<img>` or `<video>` tag shown below. Nothing else changes
 | slot | file | spec | notes |
 |---|---|---|---|
 | `hero-reel` | `assets/video/hero-reel.mp4` | 1920×1080, 12–20s, **silent loop**, < 6 MB | Autoplays behind the headline. Keep it slow and wide — no fast cuts. Needs a matching poster frame `hero-poster.jpg`. **Currently filled** with a 5s AI clip (David in a modern home) — `1920×718`, audio stripped, bottom cropped to remove the Hailuo/MiniMax watermark. `object-position:50% 38%` in CSS keeps his face in frame. Replace with real footage when available. |
-| `video-feature` | `assets/video/feature-tour.mp4` | 1920×1080, 60–90s, with audio | Featured property walkthrough. Rotate monthly. Needs `feature-tour-poster.jpg`. |
+| `video-feature` | `assets/video/handing-keys.mp4` | 1920×1080, 4s, silent loop | **FILLED.** David can't film a walkthrough for every listing that goes up, so this slot dropped the per-listing tour idea and became a generic "closing day" loop instead — an AI clip of two hands exchanging house keys, no branding/watermark. Poster frame `handing-keys-poster.jpg` already made from the video itself. Swap for a real clip (an actual key handoff, or a "sold" sign going up) whenever there's one to shoot. |
 | `video-meet` | `assets/video/meet-david.mp4` | 1080×1920 vertical, 30–45s | "Meet David." Burn in subtitles — most views are muted. Doubles as a Reel. |
 | `video-community` | `assets/video/brandon-life.mp4` | 1080×1920 vertical, 30–45s | Brandon life: Assiniboine trails, downtown, schools, winter + summer. |
 | *(poster frames)* | `assets/img/*-poster.jpg` | same dimensions, JPG | One per video. Without these the videos show black until they load. |
