@@ -95,7 +95,7 @@ davidcastellanos-rebrand/
 ├── js/main.js          ~250 lines, no dependencies, commented by section
 ├── site.webmanifest
 ├── assets/
-│   ├── video/          hero-reel, handing-keys, meet-david, brandon-life
+│   ├── video/          hero-reel, handing-keys
 │   └── img/
 │       ├── brand/      face-derived logo mark + favicons
 │       ├── agent/
