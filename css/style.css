@@ -573,12 +573,7 @@ input[type=range]::-moz-range-thumb{
 /* =========================================================
    VALUATION BAND
    ========================================================= */
-.evaluation{ position:relative; overflow:hidden; color:#fff; padding:clamp(74px,10vw,136px) 0; }
-.evaluation__scrim{
-  position:absolute; inset:0;
-  background:linear-gradient(90deg, rgba(19,19,19,.9) 0%, rgba(19,19,19,.52) 100%);
-}
-.evaluation__content{ position:relative; z-index:2; }
+.evaluation{ background:var(--ink); color:#fff; padding:clamp(74px,10vw,136px) 0; }
 .evaluation .lede{ color:rgba(255,255,255,.72); margin-bottom:28px; }
 
 .inline-form{ display:flex; gap:10px; flex-wrap:wrap; max-width:680px; }

@@ -58,7 +58,7 @@ block** with the real `<img>` or `<video>` tag shown below. Nothing else changes
 
 **Dropped for now (2026-09-04):** the "Meet David" intro (`meet-david.mp4`, 1080×1920 vertical, subtitled) and the "Living in Brandon" city film (`brandon-life.mp4`, same spec — trails, downtown, schools) were both unfilmed placeholders, so the `#videos` section was cut down to just the one real video rather than ship two more empty boxes. If/when either gets filmed, add a second `.video-card` back into `#videos` in `index.html` (see git history around 2026-09-04 for the markup) and widen `.videos__grid`'s `max-width` back out.
 
-### Photo (16 files)
+### Photo (15 files)
 
 | slot | file | spec | notes |
 |---|---|---|---|
@@ -66,7 +66,7 @@ block** with the real `<img>` or `<video>` tag shown below. Nothing else changes
 | ~~`path-buy` / `path-sell` / `path-invest`~~ | — | — | **Dropped.** The "What I do" cards are now text-only (number / heading / paragraph / link) with a top accent rule. Generic mood shots there read as stock; the editorial cards look better and need no assets. Add `<img>` back inside each `.path` before `.path__body` if real photos ever exist. |
 | listings | `data/listings.json` (+ `assets/img/listings/*`) | — | **Listings are data-driven.** `js/main.js` §4 fetches `data/listings.json` and builds every card + detail popup from it. To auto-sync from REALTOR.ca, `scripts/sync-listings.mjs` + the `sync-listings` GitHub Action rewrite that file from the CREA DDF® feed once credentials are added — see `DDF-SETUP.md`. Until then it holds a hand-seeded copy of the 5 current listings (`"source": "manual-seed"`) with local photos: coulter-01…26 (20 Coulter Way), tenth-302[-02] (302 10th St), perry-industrial-lots (both Perry lots, one plat map), grandview-527[-02]. Seeded 2026-09-03 — **verify vs MLS before launch.** |
 | ~~`hood-*`~~ | — | — | **Section removed.** The "Neighbourhoods I know best" grid is gone (markup, CSS, nav links). Re-add a `<section class="hoods">` if it ever comes back. |
-| `evaluation-bg` | `assets/img/evaluation-bg.jpg` | 2400×1200 | Wide exterior at dusk, interior lights on. Text sits over the left half — keep that side quiet. |
+| ~~`evaluation-bg`~~ | — | — | **Slot removed 2026-09-04.** The valuation band is now a flat `var(--ink)` black background instead of a photo — no exterior-at-dusk shot needed. Add a `.evaluation{ background: ... }` image + scrim back in if a real photo ever comes in. |
 | — | `assets/img/og-cover.jpg` | 1200×630 | Social share card. Not a slot; referenced in `<head>`. |
 
 ---
