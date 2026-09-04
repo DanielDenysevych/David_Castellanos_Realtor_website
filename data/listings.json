@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-03T00:00:00Z",
+  "generated": "2026-09-04T00:00:00Z",
   "source": "manual-seed",
-  "note": "Seeded by hand from public MLS data 2026-09-03. Replaced automatically once the CREA DDF sync (scripts/sync-listings.mjs) has credentials.",
+  "note": "Seeded by hand from realtor.ca David Castellanos agent page (agent ID 2101246) 2026-09-04 — verified against his individual listing search (2 active). Replaced automatically once the CREA DDF sync (scripts/sync-listings.mjs) has credentials.",
   "listings": [
     {
       "mls": "202612563",
@@ -15,7 +15,7 @@
       "intent": "buy invest",
       "office": "Sutton-Harrison Realty",
       "spec": "5 bed · 3 bath · 1,454 sq ft · built 2008",
-      "sub": "Brandon, Manitoba  R7A2V1 · Woodlands · MLS® 202612563",
+      "sub": "Brandon, Manitoba  R7A2V1 · Woodlands · MLS® 202612563",
       "description": "Spacious 3+2 bedroom, 2.5-bathroom condo in the desirable Woodlands area of Brandon. An open main floor connects the living room, dining area and kitchen. Three bedrooms sit on the upper level, with two more rooms downstairs for bedrooms, an office or storage. Close to schools, shopping, parks and walking pathways.",
       "facts": [
         [
@@ -167,206 +167,73 @@
       ]
     },
     {
-      "mls": "202604265",
+      "mls": "202613856",
       "status": "Active",
-      "kind": "Commercial",
-      "price": 379999,
-      "priceLabel": "$379,999",
-      "address": "302 10th Street",
-      "areaLabel": "Brandon · Downtown",
-      "area": "Downtown and East End",
+      "kind": "House",
+      "price": 239900,
+      "priceLabel": "$239,900",
+      "address": "853 7th Street",
+      "areaLabel": "Brandon · South Central",
+      "area": "South Central",
       "intent": "buy invest",
       "office": "Sutton-Harrison Realty",
-      "spec": "Retail / mixed-use · 2 storeys · built 1898",
-      "sub": "Brandon, Manitoba  R7A4G1 · Downtown · MLS® 202604265",
-      "description": "Mixed-use building on a high-traffic downtown corner. The main floor (about 1,500 sq ft) plus basement is leased to an established restaurant tenant to February 2027, with a renewal option. The second floor is a 3-bedroom apartment (about 1,560 sq ft) rented year to year. Restaurant equipment list and income/expense analysis available. Measurements approximate; buyer to do their own due diligence.",
+      "spec": "3 bed · 2 bath · 728 sq ft · built 1914",
+      "sub": "Brandon, Manitoba  R7A3T8 · South Central · MLS® 202613856",
+      "description": "Welcome to this 3-bedroom, 1.5-bathroom home perfect for first-time buyers or anyone seeking a cozy, well-located property. Nestled in a quiet neighbourhood close to schools, parks and shopping, this home offers both convenience and comfort. The spacious deck is ideal for hosting family gatherings, summer BBQs, or simply enjoying morning coffee in the fresh air. The finished basement adds valuable living space, featuring a bedroom, half bathroom and a dedicated office ideal for remote work or quiet study. Note: the basement bedroom window may not meet current egress standards. Shingles replaced 2026.",
       "facts": [
         [
           "Type",
-          "Retail / mixed-use"
+          "Single family — house"
+        ],
+        [
+          "Bedrooms",
+          "3 (1 in basement)"
+        ],
+        [
+          "Bathrooms",
+          "2 (1 full + 1 half)"
+        ],
+        [
+          "Size",
+          "728 sq ft · built 1914"
         ],
         [
           "Storeys",
-          "2 · 2 units"
-        ],
-        [
-          "Built",
-          "1898"
-        ],
-        [
-          "Land size",
-          "3,074 sq ft · 25 ft frontage"
-        ],
-        [
-          "Parking",
-          "Rear"
-        ],
-        [
-          "Heating",
-          "Electric baseboard"
+          "1"
         ],
         [
           "Property taxes",
-          "$5,106.06 / year"
+          "$1,886.90 / year"
+        ],
+        [
+          "Parking",
+          "None"
+        ],
+        [
+          "Lot",
+          "3,960 sq ft · 33 ft frontage"
         ],
         [
           "MLS®",
-          "202604265"
+          "202613856"
         ]
       ],
       "photos": [
         {
-          "src": "assets/img/listings/tenth-302.jpg",
-          "alt": "302 10th Street storefront from the front"
+          "src": "assets/img/listings/seventh-853-00.jpg",
+          "alt": "Front exterior of the white bungalow at 853 7th Street"
         },
         {
-          "src": "assets/img/listings/tenth-302-02.jpg",
-          "alt": "302 10th Street building on the corner"
-        }
-      ]
-    },
-    {
-      "mls": "202525443",
-      "status": "Active",
-      "kind": "Land",
-      "price": 570900,
-      "priceLabel": "$570,900",
-      "address": "624 Perry Street",
-      "areaLabel": "Brandon · Vic East",
-      "area": "Downtown and East End",
-      "intent": "buy invest",
-      "office": "Sutton-Harrison Realty",
-      "spec": "Vacant land · 2.19 acres · for sale or lease",
-      "sub": "Brandon, Manitoba  R7A7L2 · Vic East Industrial Park · MLS® 202525443",
-      "description": "Fully serviced 2.19-acre lot in the new Vic East Industrial Park — gas, hydro, sewer and water in place, level and drainable with a stable gravel base ready for development. Excellent access to Victoria Avenue East (PTH 1A) and Highway 110, adjacent to Assiniboine College and the East End residential subdivision, among established industrial neighbours.",
-      "facts": [
-        [
-          "Type",
-          "Vacant land — commercial mix"
-        ],
-        [
-          "Title",
-          "Freehold"
-        ],
-        [
-          "Land size",
-          "2.19 acres"
-        ],
-        [
-          "Frontage",
-          "296 ft · 322 ft deep"
-        ],
-        [
-          "Offered",
-          "For sale or lease"
-        ],
-        [
-          "MLS®",
-          "202525443"
-        ]
-      ],
-      "photos": [
-        {
-          "src": "assets/img/listings/perry-industrial-lots.jpg",
-          "alt": "Subdivision plan of the Vic East Industrial Park lots on Perry Street, Brandon"
-        }
-      ]
-    },
-    {
-      "mls": "202525452",
-      "status": "Active",
-      "kind": "Land",
-      "price": 317900,
-      "priceLabel": "$317,900",
-      "address": "529 Perry Street",
-      "areaLabel": "Brandon · Vic East",
-      "area": "Downtown and East End",
-      "intent": "buy invest",
-      "office": "Sutton-Harrison Realty",
-      "spec": "Vacant land · 1.22 acres · for sale or lease",
-      "sub": "Brandon, Manitoba  R7A7L2 · Vic East Industrial Park · MLS® 202525452",
-      "description": "Fully serviced 1.22-acre lot in the Vic East Industrial Park — gas, hydro, sewer and water in place, level drainable site with a gravel base. Access to Victoria Avenue East (PTH 1A) and Highway 110, next to Assiniboine College and the East End subdivision.",
-      "facts": [
-        [
-          "Type",
-          "Vacant land — commercial mix"
-        ],
-        [
-          "Title",
-          "Freehold"
-        ],
-        [
-          "Land size",
-          "1.22 acres"
-        ],
-        [
-          "Frontage",
-          "125 ft · 426 ft deep"
-        ],
-        [
-          "Offered",
-          "For sale or lease"
-        ],
-        [
-          "MLS®",
-          "202525452"
-        ]
-      ],
-      "photos": [
-        {
-          "src": "assets/img/listings/perry-industrial-lots.jpg",
-          "alt": "Subdivision plan of the Vic East Industrial Park lots on Perry Street, Brandon"
-        }
-      ]
-    },
-    {
-      "mls": "202610941",
-      "status": "Active",
-      "kind": "Land",
-      "price": 189900,
-      "priceLabel": "$189,900",
-      "address": "527 Grandview Street",
-      "areaLabel": "Brandon · Vic East",
-      "area": "Downtown and East End",
-      "intent": "buy invest",
-      "office": "Sutton-Harrison Realty",
-      "spec": "Vacant land · 0.62 acres · for sale or lease",
-      "sub": "Brandon, Manitoba  R7A7L2 · Vic East · MLS® 202610941",
-      "description": "IG-zoned vacant lot, 104 × 256 ft, fully serviced by summer 2026. Access to trucking routes (PTH 1A, Victoria Avenue East, Highway 110 eastern access) and high visibility from Victoria Avenue East. Walking distance from Brandon's eastern residential subdivision and next to Assiniboine College's main campus.",
-      "facts": [
-        [
-          "Type",
-          "Vacant land — commercial mix"
-        ],
-        [
-          "Title",
-          "Freehold"
-        ],
-        [
-          "Zoning",
-          "IG (general industrial)"
-        ],
-        [
-          "Land size",
-          "0.62 acres · 104 × 256 ft"
-        ],
-        [
-          "Offered",
-          "For sale or lease ($22 / sq ft)"
-        ],
-        [
-          "MLS®",
-          "202610941"
-        ]
-      ],
-      "photos": [
-        {
-          "src": "assets/img/listings/grandview-527.jpg",
-          "alt": "Graded vacant lot with services going in"
+          "src": "assets/img/listings/seventh-853-01.jpg",
+          "alt": "Front of the home from the sidewalk, showing the covered entry"
         },
         {
-          "src": "assets/img/listings/grandview-527-02.jpg",
-          "alt": "Vacant lot looking toward Victoria Avenue East"
+          "src": "assets/img/listings/seventh-853-02.jpg",
+          "alt": "Aerial view of the roofline and front yard"
+        },
+        {
+          "src": "assets/img/listings/seventh-853-03.jpg",
+          "alt": "Aerial view of the back deck, yard and detached shed"
         }
       ]
     }
